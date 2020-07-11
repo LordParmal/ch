@@ -146,7 +146,7 @@ int main(int argc, char **argv) {
         bzero(&msg, sizeof(msg));
         msg.type = CHAT_WALL;
         strcpy(msg.name, request.name);
-        printf(L_RED"说点什么吧 ："NONE);
+        printf(L_RED"可以聊天了 ："NONE);
         scanf("%[^\n]s", msg.msg);
         getchar();
         if (!strlen(msg.msg)) {
