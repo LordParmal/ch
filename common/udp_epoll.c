@@ -55,11 +55,11 @@ void add_to_sub_reactor(struct User *user) {
         add_event_ptr(repollfd, team[sub].fd, EPOLLIN | EPOLLET, &team[sub]);
 
     
-    printf(GREEN"公告:"L_YELLOW"欢迎%s上线~\n"NONE, user->name);
+    printf(GREEN"公告:"L_YELLOW"欢迎 %s上线~\n"NONE, user->name);
     struct ChatMsg msg;
     bzero(&msg, sizeof(msg));
     msg.type = CHAT_SYS;
-    sprintf(msg.msg, L_YELLOW"欢迎%s上线~"NONE, user->name);
+    sprintf(msg.msg, L_YELLOW"欢迎 %s上线~"NONE, user->name);
     send_all(&msg);
 
 }
