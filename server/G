@@ -1,0 +1,1 @@
+gcc -o server server.c  ../common/common.c ../common/work.c ../common/udp_server.c ../common/data.c  ../common/udp_epoll.c ../common/sub_reactor.c ../common/thread_pool.c -lpthread -I ../common/ $1 $2

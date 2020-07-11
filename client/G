@@ -1,0 +1,1 @@
+gcc -o talk client.c ../common/common.c ../common/data.c ../common/udp_client.c -lpthread -I ../common/ $1 $2
