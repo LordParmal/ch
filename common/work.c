@@ -43,16 +43,13 @@ void show_members(struct User * user) {
     bzero(&msg, sizeof(msg));
     msg.type = CHAT_FUNC;
 
-    sprintf(msg.msg, BLUE"Blue team:"NONE);
+    sprintf(msg.msg, RED"目前在线的好友有:"NONE);
     send_one(&msg, user);
     
     for (int i = 0; bteam[i].online; i++) {
         sprintf(msg.msg,"%s", bteam[i].name);
         send_one(&msg, user);
     }
-    sprintf(msg.msg, L_RED"Red team:"NONE);
-    send_one(&msg, user);
-    
     for (int i = 0; rteam[i].online; i++) {
         sprintf(msg.msg,"%s", rteam[i].name);
         send_one(&msg, user);
